@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- * description: ai dhaha
+ * Description: ai dhaha
  *
  * Return: always 0 (success)
  */
