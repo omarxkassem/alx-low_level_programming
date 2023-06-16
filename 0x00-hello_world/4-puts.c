@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - entry point
- * descriprion: this is descriprion
- * return: always 0 (success)
+ * Description: this is descriprion
+ * Return: Always 0 (success)
 */
 
 int main(void)
