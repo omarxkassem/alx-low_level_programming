@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- * Description: a program that is 
+ * Description: a program that is
  *
  * Return: always 0 (success)
 */
