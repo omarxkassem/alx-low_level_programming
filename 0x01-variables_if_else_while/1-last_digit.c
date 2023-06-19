@@ -5,7 +5,8 @@
 /**
  * main - entry point.
  *
- * Description: this code does hard work.
+ * Description: print the value of n status:
+ * 		greater than, is zero and is not less than 6.
  *
  * Return: always 0 (success).
 */
