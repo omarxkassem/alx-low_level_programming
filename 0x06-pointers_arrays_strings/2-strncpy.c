@@ -1,24 +1,41 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _strncat - concatenates two strings with limited in bytes
- * @dest: a string argument to hold the concatenated string
- * @src: a string argument to be concatenated
- * @n: an argument that specifies how many bytes to be concatenated
- * Return: returns dest
+ * *_strncpy - copies a string, printing NUL characters if the size of
+ *             destination is large enough, or cropping otherwise.
+ * @dest: the destination string.
+ * @src: the source string.
+ * @n: the size of the destination string.
+ *
+ * Return: a pointer of the resulting string.
  */
-
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
+	int len_src, counter, null_chars;
 
-	for (; dest[i] != '\0'; i++)
-		;
-	for (; src[j] != '\0'; j++)
+	len_src = counter = null_chars = 0;
+
+	while (src[len_src] != '\0')
+		len_src++;
+
+	if (n >= 0)
 	{
-		if (j < n)
-			dest[i + j] = src[j];
+		while (counter < n)
+		{
+			dest[counter] = src[counter];
+			counter++;
+		}
+		if (n - len_src > 0)
+		{
+			null_chars = n - len_src;
+			counter = 0;
+			while (counter < null_chars)
+			{
+				dest[counter + len_src] = '\0';
+				counter++;
+			}
+		}
 	}
+
 	return (dest);
 }
