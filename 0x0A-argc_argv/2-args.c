@@ -1,23 +1,19 @@
-#include<stdlib.h>
-#include<stdio.h>
-/**
- *main - print all arguments
- *
- * @argc: number of arguments
- *
- *@argv: value of argument
- *
- *Return: 0
- */
+#include "holberton.h"
 
-int main(char __attribute__((unused)) argc, char *argv[])
+/**
+ * main - prints program's arguments including the first one.
+ * @argc: Program's argument count.
+ * @argv: Program's argument vector.
+ *
+ * Return: Always 0 (success).
+ */
+int main(int argc, char *argv[])
 {
-int i;
-i = 0;
-while (i < argc)
-{
-printf("%s\n", argv[i]);
-i++;
-}
-return (0);
+	int index;
+
+	index = 0;
+	for (index = 0; index < argc; index++)
+		printf("%s\n", argv[index]);
+
+	return (0);
 }
